@@ -33,7 +33,7 @@ public class Lecture {
         this.fichier = new BufferedReader(new FileReader(this.source));
     }
     
-    public int[][] ChargerPartie() {
+    public int[][] ChargerImage() {
         String delimiteurs = " ";
         int i = 0;
         int j = 0;

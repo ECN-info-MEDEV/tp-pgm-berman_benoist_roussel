@@ -19,5 +19,8 @@ public class Main {
         Image image = new Image(lectureImage.ChargerImage());
         image.setWidth(lectureImage.getWidth());
         image.setLength(lectureImage.getLength());
+        
+        Ecriture ecritureImage = new Ecriture("baboon2.pgm");
+        ecritureImage.sauvegarderImage(image, lectureImage.getNiveauGris());
     }
 }
