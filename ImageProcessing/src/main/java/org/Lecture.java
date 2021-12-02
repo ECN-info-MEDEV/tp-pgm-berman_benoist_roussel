@@ -20,8 +20,8 @@ public class Lecture {
     private String source;
     private BufferedReader fichier;
     private int[][] image;
-    private int largueur;
-    private int hauteur;
+    private int width;
+    private int length;
     private int niveauGris;
 
     
@@ -54,9 +54,9 @@ public class Lecture {
 
                         String ligne3 = fichier.readLine();
                         StringTokenizer tokenizer3 = new StringTokenizer(ligne3, delimiteurs);
-                        this.hauteur = Integer.parseInt(tokenizer3.nextToken());
-                        this.largueur = Integer.parseInt(tokenizer3.nextToken());
-                        this.image = new int[this.hauteur][this.largueur];
+                        this.length = Integer.parseInt(tokenizer3.nextToken());
+                        this.width = Integer.parseInt(tokenizer3.nextToken());
+                        this.image = new int[this.length][this.width];
 
                         String ligne4 = fichier.readLine();
                         StringTokenizer tokenizer4 = new StringTokenizer(ligne4, delimiteurs);
@@ -65,7 +65,7 @@ public class Lecture {
                     else {
                         pixel = Integer.parseInt(mot);
                         this.image[i][j] = pixel;
-                        if(j == this.largueur - 1){
+                        if(j == this.width - 1){
                             j = 0;
                             i += 1;
                         } else {
@@ -90,12 +90,12 @@ public class Lecture {
         return image;
     }
 
-    public int getLargueur() {
-        return largueur;
+    public int getWidth() {
+        return width;
     }
 
-    public int getHauteur() {
-        return hauteur;
+    public int getLength() {
+        return length;
     }
 
     public int getNiveauGris() {

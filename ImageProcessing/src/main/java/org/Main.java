@@ -16,6 +16,8 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("Hello World");
         Lecture lectureImage = new Lecture("baboon.pgm"); // il doit être à la base du projetTP
-        lectureImage.ChargerPartie();
+        Image image = new Image(lectureImage.ChargerImage());
+        image.setWidth(lectureImage.getWidth());
+        image.setLength(lectureImage.getLength());
     }
 }
