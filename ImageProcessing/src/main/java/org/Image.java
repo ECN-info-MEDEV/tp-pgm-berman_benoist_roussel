@@ -79,12 +79,12 @@ public class Image {
         newImage2= new int[newImage1.length][this.imageMap[0].length/2];
         for (int i=0;i<newImage1.length;i++){
             for (int j=0;j<newImage1[0].length;j++){
-                newImage1[i][j]=this.imageMap[2*i][j]+this.imageMap[2*i+1][j]/2;
+                newImage1[i][j]=(this.imageMap[2*i][j]+this.imageMap[2*i+1][j])/2;
             }
         }
         for (int i=0;i<newImage2.length;i++){
             for (int j=0;j<newImage2[0].length;j++){
-                newImage1[i][j]=this.imageMap[i][2*j]+this.imageMap[i][2*j+1]/2;
+                newImage1[i][j]=(this.imageMap[i][2*j]+this.imageMap[i][2*j+1])/2;
             }
         }
         
@@ -102,7 +102,7 @@ public class Image {
                     newImage1[i][j]=this.imageMap[i/2][j];
                 }
                 else{
-                    newImage1[i][j]=this.imageMap[i/2][j]+this.imageMap[i/2+1][j];
+                    newImage1[i][j]=(this.imageMap[i/2][j]+this.imageMap[i/2+1][j])/2;
                 }
             }
         }
@@ -112,7 +112,7 @@ public class Image {
                     newImage2[i][j]=this.imageMap[i][j/2];
                 }
                 else{
-                    newImage2[i][j]=this.imageMap[i][j/2]+this.imageMap[i][j/2+1];
+                    newImage2[i][j]=(this.imageMap[i][j/2]+this.imageMap[i][j/2+1])/2;
                 } 
             }
         }

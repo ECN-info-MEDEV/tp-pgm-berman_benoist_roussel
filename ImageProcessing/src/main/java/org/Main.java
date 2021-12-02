@@ -20,7 +20,19 @@ public class Main {
         image.setWidth(lectureImage.getWidth());
         image.setLength(lectureImage.getLength());
         
-        Ecriture ecritureImage = new Ecriture("baboon2.pgm");
-        ecritureImage.sauvegarderImage(image, lectureImage.getNiveauGris());
+        Image imageseuillage = new Image(image.seuillage(125));
+        imageseuillage.setWidth(lectureImage.getWidth());
+        imageseuillage.setLength(lectureImage.getLength());
+        
+        Image imagereduction = new Image(image.reduction());
+        imagereduction.setWidth(imagereduction.getImageMap()[0].length);
+        imagereduction.setLength(imagereduction.getImageMap().length);
+        
+        
+        Ecriture ecritureImage2 = new Ecriture("baboon2.pgm");
+        ecritureImage2.sauvegarderImage(imageseuillage, 255);
+        
+        Ecriture ecritureImage3 = new Ecriture("baboon3.pgm");
+        ecritureImage3.sauvegarderImage(imagereduction, 255);
     }
 }
