@@ -84,7 +84,7 @@ public class Image {
         }
         for (int i=0;i<newImage2.length;i++){
             for (int j=0;j<newImage2[0].length;j++){
-                newImage1[i][j]=(this.imageMap[i][2*j]+this.imageMap[i][2*j+1])/2;
+                newImage2[i][j]=(this.imageMap[i][2*j]+this.imageMap[i][2*j+1])/2;
             }
         }
         

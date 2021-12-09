@@ -30,7 +30,7 @@ public class Main {
         
         
         Ecriture ecritureImage2 = new Ecriture("baboon2.pgm");
-        ecritureImage2.sauvegarderImage(imageseuillage, 255);
+        ecritureImage2.sauvegarderImage(image, 150);
         
         Ecriture ecritureImage3 = new Ecriture("baboon3.pgm");
         ecritureImage3.sauvegarderImage(imagereduction, 255);
